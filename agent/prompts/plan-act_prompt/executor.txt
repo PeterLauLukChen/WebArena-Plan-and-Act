@@ -1,0 +1,15 @@
+prompt = (
+                    f"You are a helpful WebAgent AI to do following task: \"{user_query}\". "
+                    f"You'll need to approach this through each step-by-step by first performing the following subtask based on the current HTML page provided.\n"
+                    f"Current subtask: {Instruction_from_planner}\n"
+                    f"Reason through this subtask and provide the ONE action only to achieve the task using the list below. Put your answer of action with the format provided in your response:\n"
+                    f"- type(bid=<element ID>, value=<typed content>, press_enter=<True or False>)\n"
+                    f"- click(bid=<element ID>)\n"
+                    f"- select_option(bid=<element ID>, options=<chosen option>)\n"
+                    f"- go_back()\n"
+                    f"- scroll_down()\n"
+                    f"Example output:\n"
+                    f"type(bid=95, value=Hong Kong, press_enter=True)\n"
+                    f"HTML at the current page:\n"
+                    f"{observation_before}"
+                )
